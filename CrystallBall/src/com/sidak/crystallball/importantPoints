@@ -1,0 +1,121 @@
+
+android:oneshot ="true" , this attribute decides whether we 
+want to run the animation once or loop it overand over again
+
+Any image file that we put in any of the drawable directories
+ can be used as a drawable resource.
+ 
+ We just need to prefix them with @drawable like we have right here.
+ We don't need to include the file extension because the file names
+ inside the drawable directories must be unique.
+ 
+ android: durations is specified in milliseconds
+ since the animation is at 24 fps, therefore 41 ms
+ 
+ we reset to our original img in animation,
+ so that we can run it over and over again	
+ 
+ it's generally a gud practice to insert the view vars in oncreate method
+ 
+ tweening animation:
+ Okay, really it's because Android generates all 
+ the states between the define start and end states.
+ 
+ The alpha property which is represented as a number between zero and one   
+ tells us how transparent the item is.
+ Zero means it's completely transparent, and
+  one means it's completely opaque.  
+  
+  
+I actually like to declare my view variables, like these,
+ as member variables of the activity class. 
+ This allows me to reference them in any methods of the class,
+ which is often helpful .
+ 
+ 
+this keyword in java refers to the current object
+
+we can use this for putting the context bcz Activity is a subclass of Context
+
+Always make sure to disable sensors you don't need,
+ especially when your activity is paused. Failing to do so
+  can drain the battery in just a few hours. Note that the
+  system will not disable sensors automatically when the screen turns off.
+  
+That means that if we register the listener in onCreate, 
+like we had before, 
+then a phone call or some other like event would break our app.
+ When the call was over,onCreate wouldn't be called,
+ so the listener wouldnt be registered,so
+  the shake detection wouldn't work.   
+  
+  
+  we can also include images in a toast , using a custom layout
+  
+  
+  The Android developer site tells us that we generally use 1 of 5 methods--
+  log.v, d, i, w, or e.
+  Why the funky letters?
+  They stand for different levels of logging.
+  E is for errors, W for warnings, I for info or informational entries,
+  D for de-bugging entries during development,
+  and V for verbose entries which are used 
+  when we're troubleshooting something 
+  and want to spew as much information as possible to the log.
+  
+  
+  In the logcat view , when we select verbose, all types of log below it are
+  also included
+  
+  searching for a log messg:
+  type tag: nameoftag
+  (case doesn't matter o'er here)
+  
+  
+ Sometimes the device gets "out of sync" with eclipse and logcat doesn't show any messages, as you've discovered.
+
+To fix this, try a) going to DDMS and selecting your device; 
+b) closing the logcat tab and creating a new one;
+ c) disconnecting your device and reconnecting it; 
+ d) exiting eclipse and restarting it; 
+ e) rebooting your device; or
+  f) rebooting your computer, in that order.
+   Usually the problem is fixed by the time you've done a).
+
+   
+   
+A common Android practice is to add a special member variable to our 
+class called tag that we can use in our calls to the log methods.
+
+
+getName will get the name of package also in thelog act view
+while getSimpleName will only get the class name
+
+A breakpoint is a point in our code
+where the debugger will break out of the normal computation
+and wait for instructions from us
+on how to proceed. 
+It's a stopping point where we can take our time to look
+at the current state of our app, and then, if we desire, 
+continue processing the codes step by step. 
+
+
+Step Into means that we'll step into the current method call,if any. 
+So, in this case, clicking on the Step Into button
+means that we would step into the super.onCreate method
+and then continue debugging from there. 
+
+Step Over, on the other hand, will step to the next line to be executed
+after the current line is all done. 
+
+
+Finally, the Step Return button
+means that we'll automatically process
+all the code until the end of the current method,
+
+remember to disconnect , then add  any breakpoints if u want to add in debug perspective
+
+
+com.example packages are not allowed to be put on google play
+
+it's a gud idea to do a full clean and rebuild of our app
